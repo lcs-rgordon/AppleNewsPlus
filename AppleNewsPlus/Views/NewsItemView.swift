@@ -31,6 +31,8 @@ struct NewsItemView: View {
                 .fontWeight(.semibold)
                 .padding(.horizontal)
             
+            Spacer()
+            
             Divider()
             
             HStack {
