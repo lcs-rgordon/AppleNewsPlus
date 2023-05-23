@@ -8,17 +8,25 @@
 import SwiftUI
 
 struct NewsItemView: View {
+    
+    // MARK: Stored properties
+    let image: String
+    let source: String
+    let headline: String
+    let timePosted: String
+    
+    // MARK: Computed properties
     var body: some View {
         VStack(alignment: .leading) {
-            Image("Farming")
+            Image(image)
                 .resizable()
                 .scaledToFit()
             
-            Image("GlobeAndMail")
+            Image(source)
                 .resizable()
                 .scaledToFit()
 
-            Text("Maritime farmers holding breath as record-dry spring wings region")
+            Text(headline)
                 .font(.title)
                 .fontWeight(.semibold)
                 .padding(.horizontal)
@@ -26,7 +34,7 @@ struct NewsItemView: View {
             Divider()
             
             HStack {
-                Text("1h ago")
+                Text(timePosted)
                 Spacer()
                 Image(systemName: "ellipsis")
             }
@@ -39,7 +47,10 @@ struct NewsItemView: View {
 
 struct NewsItemView_Previews: PreviewProvider {
     static var previews: some View {
-        NewsItemView()
+        NewsItemView(image: "Carroll",
+                     source: "Reuters",
+                     headline: "E. Jean Carroll seeks $10 millon in damages from Trump over post-verdict statements",
+                     timePosted: "1h ago")
             .preferredColorScheme(.dark)
     }
 }

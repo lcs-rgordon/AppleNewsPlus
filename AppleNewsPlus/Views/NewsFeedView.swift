@@ -11,11 +11,20 @@ struct NewsFeedView: View {
     var body: some View {
         ScrollView {
 
-            NewsItemView()
+            NewsItemView(image: "Farming",
+                         source: "GlobeAndMail",
+                         headline: "Maritime farmers holding breath as record-dry spring wrings region",
+                         timePosted: "1h ago")
 
-            NewsItemView()
-            
-            NewsItemView()
+            NewsItemView(image: "Carroll",
+                         source: "Reuters",
+                         headline: "E. Jean Carroll seeks $10 millon in damages from Trump over post-verdict statements",
+                         timePosted: "1h ago")
+
+            NewsItemView(image: "Sheep",
+                         source: "TheGuardian",
+                         headline: "New Zealand's ratio of sheep to humans at lowest point in 170 years",
+                         timePosted: "1h ago")
         }
     }
 }
